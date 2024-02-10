@@ -1,19 +1,22 @@
-// import { useState } from 'react'
 import { ThemeProvider } from 'styled-components';
 
-import { Button } from './Components/Button';
 import { defaultTheme } from './styles/themes/default';
+import { BrowserRouter, Link } from 'react-router-dom';
+
+import { GlobalStyle } from './styles/global';
+import { Router } from './Components/Router/Router';
 
 export function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <ThemeProvider theme={defaultTheme}>
-      <h1>Hello World</h1>
-      <Button variant="primary" />
-      <Button variant="secondary" />
-      <Button variant="danger" />
-      <Button />
+      <GlobalStyle />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+      {/* <h1>Hello Router</h1>
+      <Link to={'/'}>Home</Link>
+      <Link to={'/pagetwo'}>Page Two</Link>
+      <Link to={'/pagethree'}>Page Three</Link> */}
     </ThemeProvider>
   );
 }
