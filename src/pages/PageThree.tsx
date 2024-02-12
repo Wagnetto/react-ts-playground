@@ -1,16 +1,18 @@
-import { Link } from 'react-router-dom';
-import { Button } from '../Components/Button/Button';
+import { NavLink } from 'react-router-dom';
+import { Button } from '../components/Button';
 
 export function PageThree() {
   return (
     <>
       <h1>This is Page Three</h1>
-      <Link to={'/'}>
-        <Button variant="danger" buttonText="Home"></Button>
-      </Link>
-      <Link to={'/pagetwo'}>
-        <Button variant="primary" buttonText="Page two"></Button>
-      </Link>
+      <nav>
+        <NavLink to={'/'}>
+          <Button variant="danger" buttonText="Home"></Button>
+        </NavLink>
+        <NavLink to={'/pagetwo'}>
+          <Button variant="primary" buttonText="Page two"></Button>
+        </NavLink>
+      </nav>
     </>
   );
 }
